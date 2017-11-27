@@ -1,6 +1,19 @@
-composer.phar
-/vendor/
+tSiteNoClass11.php
+tSite11.php
+localsettings.TEMPLATE.json
 /wp-content/
+composer.phar
+/vendor/*
+/node_modules/*
+/oldTEMPLATEsite/*
+/repo/*
+/bianca/*
+/.well-known
+.env
+.htaccess
+/uber
+.htaccessTEMPLATE
+
 # Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
 # You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
 # composer.lock

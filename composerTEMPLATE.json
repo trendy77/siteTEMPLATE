@@ -1,0 +1,145 @@
+{
+    "name": "trendy77/siteSet",
+    "description": "WP setup build",
+    "keywords": ["bot","wordpress","wp"],
+    "license": "GPL-2.0+",
+    "authors": [{
+        "name": "Trent Fischer",
+        "email": "email@somewhere.com",
+        "role": "Lead Developer"
+    }],
+    "type": "project",
+    "minimum-stability": "dev",
+    "repositories": [{
+            "type": "composer",
+            "url": "http://wpackagist.org"
+     },
+	 {
+			"type": "package",
+            "package": {
+                "name": "trendy/site",
+                "type": "composer",
+                "version": "1.1.1",
+                },
+			"url": "http://orgmy.biz/repo"
+	 }],
+    "config": {
+        "vendor-dir": "vendor",
+        "secure-http": false
+    },
+    "require": {
+        "dg/rss-php": "^1.2",
+        "google/apiclient": "^2.0",
+        "madcoda/php-youtube-api": "^1.2",
+        "silverstripe-rebelalliance/youtubefield": "^1.0",
+        "roots/sage": "^8.5",
+        "roots/soil": "^3.7",
+		"squizlabs/PHP_CodeSniffer": "^3.0",
+		"catlabinteractive/kik-php-sdk":"*",
+		"juno_okyo/php-chatfuel-class":"*",
+		"wp-coding-standards/wpcs": "^0.13.1",
+		"aylien/textapi": "0.6.*",
+		"sentry/sentry": "^1.6",
+        "phpconsole/phpconsole": "^3.5",
+        "google/apiclient": "^2.1",
+        "monolog/monolog": "^1.22",
+        "eriktorsner/wp-bootstrap": "^0.5.2"
+	     
+    }
+  }
+ 
+ 
+ 
+	"repositories": [
+        {
+            "type": "composer",
+            "url": "http://wpackagist.org"
+        },
+		{
+        "type": "package",
+        "package": {
+            "name": "trendy/opTimise",
+            "type": "wordpress-plugin",
+            "version": "1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://orgmy.biz/plug/opTimise.zip"
+            }
+        }
+	},
+	{
+        "type": "package",
+        "package": {
+            "name": "trendy/ai1schema",
+            "type": "wordpress-plugin",
+            "version": "1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://orgmy.biz/plug/ai1schema.zip"
+            }
+        }
+	},
+	{
+        "type": "package",
+        "package": {
+            "name": "trendy/nofollow",
+            "type": "wordpress-plugin",
+            "version": "1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://orgmy.biz/plug/nofollow.zip"
+            }
+        }
+	},
+	{
+        "type": "package",
+        "package": {
+            "name": "trendy/seo-image",
+            "type": "wordpress-plugin",
+            "version": "1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://orgmy.biz/plug/seo-image.zip"
+            }
+        }
+	},
+	{
+        "type": "package",
+        "package": {
+            "name": "trendy/tperialise",
+            "type": "wordpress-theme",
+            "version": "1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://orgmy.biz/plug/tperialise.zip"
+            }
+        }
+	}
+	],
+	"config"      : {
+		"vendor-dir":  "vendor",
+		"secure-http":	false
+	},
+    "require": {
+        "wpackagist-plugin/better-analytics": "*",
+		"wpackagist-plugin/featured-image-from-url": "*",
+		"wpackagist-plugin/featured-image-from-google-images": "*",
+		"wpackagist-plugin/amp"                             : "*",
+	
+	    "wpackagist-theme/evolve": "*",
+		"trendy/opTimise": "*",
+		"deliciousbrains/wp-migrate-db-pro": "*",
+		"trendy/newspaper": "*",
+		"trendy/nofollow": "*",
+		"trendy/seo-image": "*",
+		"trendy/ai1shema": "*",
+		"wpackagist-plugin/amp-html-sitemap" : "*"
+		   },
+   "extra": {
+		"wordpress-install-dir": "/home/organ151/public_html/amazonaust",
+		"installer-paths": {
+			"/home/organ151/public_html/ombiz/spec/stuff/plugins/{$name}/": ["type:wordpress-plugin"],
+			"/home/organ151/public_html/ombiz/spec/stuff/themes/{$name}/": ["type:wordpress-theme"]
+		}
+	}
+}

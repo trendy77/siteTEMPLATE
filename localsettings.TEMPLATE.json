@@ -1,0 +1,11 @@
+{
+    "environment": "production",
+    "url": "orgmy.biz",
+    "dbhost": "localhost",
+    "dbname": "neoDbToFly",
+    "dbuser": "organ_remote",
+    "dbpass": "organ_remotePassword",
+    "wpuser": "theCreator",
+    "wppass": "t0mzdez2!Q",
+    "wppath": "/home/organ151/public_html/ombiz";
+}

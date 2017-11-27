@@ -1,0 +1,195 @@
+https://amazonaust.com.au
+https://customkitsworldwide.com
+https://fakenewsregistry.org
+https://govnews.info
+https://globetravelsearch.com
+https://es.organisemybiz.com
+https://orgmy.biz
+https://joblistingshub.com
+https://organisemybiz.com
+https://womenstylechannel.com
+https://organizemybiz.com
+https://medicalescapes.com
+https://vapedirectory.co
+https://trendypublishing.com
+https://trendypublishing.com.au
+
+
+# stop hotlinking...
+
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://amazonaust.com.au [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://customkitsworldwide.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://fakenewsregistry.org [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://govnews.info [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://globetravelsearch.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://es.organisemybiz.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://orgmy.biz [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://joblistingshub.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://organisemybiz.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://womenstylechannel.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://organizemybiz.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://medicalescapes.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://vapedirectory.co [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://trendypublishing.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://trendypublishing.com.au [NC]
+RewriteRule \.(jpg|jpeg|png|gif)$ orgmy.biz/errors/umm.gif [NC,R,L]
+
+
+
+
+php_value <key> <val>
+
+
+# FORCE HTTPS
+RewriteEngine on
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+# remove www.
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.amazonaust\.com [NC]
+RewriteRule ^(.*)$ http://amazonaust.com/$1 [L,R=301]
+
+
+# alias path to script
+# index.fcgi file in some directory, and any requests within that directory that fail to resolve a filename/directory will be sent to the index.fcgi script. It's good if you want baz.foo/some/cool/path to be handled by baz.foo/index.fcgi (which also supports requests to baz.foo) while maintaining baz.foo/css/style.css and the like.
+RewriteEngine On
+RewriteRule ^$ index.fcgi/ [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.fcgi/$1 [QSA,L]
+
+
+# CLEAN URLS -- ie. INDEX.PHP will server as ./index not ./index.php
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^([^.]+)$ $1.php [NC,L]
+
+
+# for password
+	AuthType Basic
+	AuthName "Password Protected Area"
+	AuthUserFile /home/organ151/.htpasswd
+	Require valid-user
+
+# default file
+	DirectoryIndex index.php index.html index.htm ../index.php
+
+# error docs
+	<IfModule mod_rewrite.c>
+	RewriteEngine On
+	ErrorDocument 404 /errors/404.php
+	ErrorDocument 403 /errors/403.php
+	ErrorDocument 500 /errors/500.php
+	</IfModule>
+
+# options std?
+	Options -Indexes
+	Options +FollowSymlinks
+
+# access to this file
+	<Files .htaccess>
+	deny from all
+	</Files>
+
+php_value $path /home/organ151/public_html
+php_value $user headlines
+php_value $pass ExtJCJn%jRMzl1(5L5W*JBP#
+php_value $addy organisemybiz.com
+php_value $ua UA-84079763-6
+php_value $fbappId 1209167032497461
+php_value $fbpageId 259565577769881
+php_value $twitcnkey 2vOkc55DN1UbX6NJjJawC7UNM
+php_value $twitcnsrt tcXIP5xPmXqNRgmiLLBVoEfY1hyKiAaDhhbi4bzrmbB3Urdl6V
+php_value $twitkey 817542417788194816-RpuUbfOb3j8hm5v0HRny4XcQ4Ffv0Lq
+php_value $twitscrt 6NL6sJ30NN14L36GiODkA69yvn352hnQtkCtttItGAeI5
+php_value $hash organisemybiz
+
+<IfModule mod_deflate.c>
+
+        # Force compression for mangled headers.
+        # http://developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping
+        <IfModule mod_setenvif.c>
+                <IfModule mod_headers.c>
+                        SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+                        RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+                </IfModule>
+        </IfModule>
+
+        # Compress all output labeled with one of the following MIME-types
+        # (for Apache versions below 2.3.7, you don't need to enable `mod_filter`
+        #    and can remove the `<IfModule mod_filter.c>` and `</IfModule>` lines
+        #    as `AddOutputFilterByType` is still in the core directives).
+        <IfModule mod_filter.c>
+            AddOutputFilterByType DEFLATE application/atom+xml \
+              application/javascript \
+              application/json \
+              application/rss+xml \
+              application/vnd.ms-fontobject \
+              application/x-font-ttf \
+              application/x-web-app-manifest+json \
+              application/xhtml+xml \
+              application/xml \
+              font/opentype \
+              image/svg+xml \
+              image/x-icon \
+              text/css \
+              text/html \
+              text/plain \
+              text/x-component \
+              text/xml
+        </IfModule>
+
+</IfModule>
+
+<IfModule mod_expires.c>
+        ExpiresActive on
+        ExpiresDefault                                    "access plus 1 month"
+
+    # CSS
+        ExpiresByType text/css                            "access plus 1 year"
+
+    # Data interchange
+        ExpiresByType application/json                    "access plus 0 seconds"
+        ExpiresByType application/xml                     "access plus 0 seconds"
+        ExpiresByType text/xml                            "access plus 0 seconds"
+
+    # Favicon (cannot be renamed!)
+        ExpiresByType image/x-icon                        "access plus 1 week"
+
+    # HTML components (HTCs)
+        ExpiresByType text/x-component                    "access plus 1 month"
+
+    # HTML
+        ExpiresByType text/html                           "access plus 0 seconds"
+
+    # JavaScript
+        ExpiresByType application/javascript              "access plus 1 year"
+
+    # Manifest files
+        ExpiresByType application/x-web-app-manifest+json "access plus 0 seconds"
+        ExpiresByType text/cache-manifest                 "access plus 0 seconds"
+
+    # Media
+        ExpiresByType audio/ogg                           "access plus 1 month"
+        ExpiresByType image/gif                           "access plus 1 month"
+        ExpiresByType image/jpeg                          "access plus 1 month"
+        ExpiresByType image/png                           "access plus 1 month"
+        ExpiresByType video/mp4                           "access plus 1 month"
+        ExpiresByType video/ogg                           "access plus 1 month"
+        ExpiresByType video/webm                          "access plus 1 month"
+
+    # Web feeds
+        ExpiresByType application/atom+xml                "access plus 1 hour"
+        ExpiresByType application/rss+xml                 "access plus 1 hour"
+
+    # Web fonts
+        ExpiresByType application/font-woff2              "access plus 1 month"
+        ExpiresByType application/font-woff               "access plus 1 month"
+        ExpiresByType application/vnd.ms-fontobject       "access plus 1 month"
+        ExpiresByType application/x-font-ttf              "access plus 1 month"
+        ExpiresByType font/opentype                       "access plus 1 month"
+        ExpiresByType image/svg+xml                       "access plus 1 month"
+</IfModule>

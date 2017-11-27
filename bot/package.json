@@ -1,0 +1,24 @@
+{
+  "name": "botsdk",
+  "version": "1.0.0",
+  "description": "emulator bot sdk",
+  "main": "noteBot.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "trnet",
+  "license": "ISC",
+  "dependencies": {
+    "@kikinteractive/kik": "^2.2.1",
+    "botbuilder": "^3.9.1",
+    "restify": "^5.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "github.com/trendy77/botsdk"
+  },
+  "keywords": [
+    "bot"
+  ]
+}

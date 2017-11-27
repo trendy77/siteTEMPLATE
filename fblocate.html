@@ -1,0 +1,16 @@
+<?php
+
+include_once('functPlate.php');
+
+tHead();
+<div id="fb-root"></div>
+      <div id="wrapper">
+		<input class="btn" type="button" id="loginBtn" value="Get Permissions from Facebook"/>
+		<input class="btn" type="button" value="Get Friends' Locations" id="friendBtn"/>
+		<!-- the following div will show the status messages during the workflow of application-->
+		<div id="status"></div>
+		<!-- shows the images loaded till now-->
+		<div id="count"></div>
+		<!-- holds all the friend's locations-->
+		<table id="location"></table>
+      </div>

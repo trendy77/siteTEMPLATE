@@ -10,12 +10,8 @@ $sitedes= 'Proven, cost-effective Social Media audience engagement. Utilizing pr
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script>if (!window.jQuery) { document.write('<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"><\/script>'); }
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	
 		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="all"/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="css/style.css" type="text/css" rel="stylesheet" media="all"/>
 		<!---- <script src="js/materialize.js"></script> -->

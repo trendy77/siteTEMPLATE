@@ -1,54 +1,21 @@
  <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://orgmy.biz/js/materialize.js"></script>
-  <script src="https://orgmy.biz/js/init.js"></script>
-
-  <script type="text/javascript">
-  var vglnk = { key: 'db8e8b461e1b6dcc640b00494a7a95e9' };
-  (function(d, t) {
-    var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
-    s.src = '//cdn.viglink.com/api/vglnk.js';
-    var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
-  }(document, 'script'));
-</script>
-
-          <!-- Google Plus Button-->
+	<script>if (!window.jQuery) { document.write('<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"><\/script>'); }
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+ 
+           <!-- Google Plus Button-->
     <script src="https://apis.google.com/js/platform.js" async defer></script>   
     <!-- Twitter Button -->
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
   
-  <script>
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-  };
-  // Load the SDK asynchronously
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-  // Here we run a very simple test of the Graph API after login is successful.  See statusChangeCallback() for when this call is made.
-  function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
-    });
-  }
-    </script>
-
-	<script>
+ 	<script>
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '<?php if ($FBAPPID){ echo $FBAPPID } else { echo '1863943023885616'; ?>',
       cookie     : true,
       xfbml      : true,
-      version    : 'v2.8'
+      version    : 'v2.11'
     });
     FB.AppEvents.logPageView();   
   };
@@ -59,6 +26,16 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+   
+  // Here we run a very simple test of the Graph API after login is successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
   </script>
   
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -84,7 +61,7 @@ FB.getLoginStatus(function(response) {
 
 function onButtonClick() {
 FB.AppEvents.logEvent("sentFriendRequest");
-} ;
+};
 </script> 
 
 <script>

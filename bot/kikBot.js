@@ -16,11 +16,8 @@ bot.onTextMessage((message, next) => {
     const userState = getUserState(message.from);
     if (!userState.inIntroState) {
         // Send the user the intro state
-       
-
-        return;
+     return;
     }
-
     // Allow the next handler take over
     next();
 });
